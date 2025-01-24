@@ -40,7 +40,7 @@
         button:hover {
             background-color: #45a049;
         }
-        #senha-container, #conteudo, #misterio, #localizacao {
+        #senha-container, #conteudo, #localizacao {
             display: none;
         }
         input[type="text"] {
@@ -69,7 +69,6 @@
         function verificarResposta() {
             const resposta = document.querySelector('#resposta').value.toLowerCase();
             if (resposta === "escola") {
-                document.querySelector('#misterio').style.display = 'none';
                 document.querySelector('#localizacao').style.display = 'block';
             } else {
                 alert("Resposta incorreta. Tente novamente!");
@@ -90,24 +89,37 @@
 
     <!-- Conteúdo da página -->
     <div id="conteudo">
-        <h2>Feliz Aniversário, Kamilly!</h2>
-        <p>Seja bem-vinda à jornada para comemorar mais um ano de vida. Você é muito especial, e para que saiba o quanto é importante, você irá dar início a um caminho onde encontrará todos aqueles que te desejam o melhor. Mas antes da revelação, terá que desvendar as charadas. Espero que se divirta muito! Tudo isso foi feito com muito carinho somente para você. Obrigado por ser luz na minha vida. Feliz 23 aninhos de vida! ❤️ - Wallyson Nascimento</p>
-        
+        <h2>Feliz Aniversário Kamilly</h2>
+        <p>
+            Seja bem-vinda à jornada para comemorar mais um ano de vida. Você é muito especial, 
+            e para que saiba o quanto é importante você irá dar início a um caminho onde 
+            encontrará todos aqueles que te desejam o melhor. Espero que se divirta muito, 
+            tudo isso foi feito com muito carinho somente para você. Obrigado por ser luz na minha vida. 
+            Feliz 23 aninhos de vida!!! Wallyson Nascimento.
+        </p>
+
         <!-- Vídeo -->
         <iframe src="https://www.youtube.com/embed/8dvSUU5x7tY" allowfullscreen></iframe>
-        
-       <!-- Hora do Mistério -->
+
+        <!-- Hora do Mistério -->
         <div id="misterio">
-            <h3>Hora do Mistério</h3>
-            <p>Sou o lugar onde tudo começou, nosso amor nasceu e logo se firmou. Entre cadernos e lições, fui testemunha da emoção, do primeiro beijo, nasceu a conexão. Quem sou eu?</p>
+            <h2>Hora do Mistério</h2>
+            <p>
+                Sou o lugar onde tudo começou, nosso amor nasceu e logo se firmou. <br>
+                Entre cadernos e lições, fui testemunha da emoção, <br>
+                do primeiro beijo, nasceu a conexão. Quem sou eu?
+            </p>
             <input type="text" id="resposta" placeholder="Sua resposta">
-            <button onclick="verificarResposta()">Enviar</button>
+            <button onclick="verificarResposta()">Enviar Resposta</button>
         </div>
 
         <!-- Localização do próximo QR Code -->
-        <div id="localizacao">
-            <h3>Parabéns! Você acertou!</h3>
-            <p>Envie uma mensagem para Lucas dizendo a seguinte frase: <strong>"Pôneis Malditos"</strong> e poderá seguir sua jornada.</p>
+        <div id="localizacao" style="display: none;">
+            <h2>Parabéns!</h2>
+            <p>
+                Envie uma mensagem para Lucas dizendo a seguinte frase: <strong>"Pôneis Malditos"</strong>, 
+                e poderá seguir sua jornada.
+            </p>
         </div>
     </div>
 </body>
