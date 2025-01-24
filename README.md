@@ -12,7 +12,7 @@
             margin: 0;
             padding: 20px;
         }
-        h1 {
+        h1, h2 {
             color: #4CAF50;
         }
         p {
@@ -91,34 +91,26 @@
     <!-- Conteúdo da página -->
     <div id="conteudo">
         <h2>Feliz Aniversário, Kamilly!</h2>
-        <p>
-            Seja bem-vinda à jornada para comemorar mais um ano de vida. Você é muito especial, 
-            e para que saiba o quanto é importante, você irá dar início a um caminho onde encontrará 
-            todos aqueles que te desejam o melhor. Mas antes da revelação, terá que desvendar as charadas! 
-            Espero que se divirta muito. Tudo isso foi feito com muito carinho somente para você. 
-            Obrigado por ser luz na minha vida. Feliz 23 aninhos de vida! — Wallyson Nascimento.
-        </p>
-        <iframe 
-            src="https://www.youtube.com/embed/8dvSUU5x7tY" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-
+        <p>Seja bem-vinda à jornada para comemorar mais um ano de vida. Você é muito especial, e para que saiba o quanto é importante, você irá dar início a um caminho onde encontrará todos aqueles que te desejam o melhor. Mas antes da revelação, terá que desvendar as charadas. Espero que se divirta muito! Tudo isso foi feito com muito carinho somente para você. Obrigado por ser luz na minha vida. Feliz 23 aninhos de vida! ❤️ - Wallyson Nascimento</p>
+        
+        <!-- Vídeo -->
+        <iframe src="https://www.youtube.com/embed/8dvSUU5x7tY" allowfullscreen></iframe>
+        
         <!-- Hora do Mistério -->
         <div id="misterio">
-            <h3>Hora do Mistério</h3>
-            <p>Sou o lugar onde tudo começou, nosso amor nasceu e logo se firmou.  
-            Entre cadernos e lições, fui testemunha da emoção,  
+            <h2>Hora do Mistério</h2>
+            <p>Sou o lugar onde tudo começou, <br>
+            nosso amor nasceu e logo se firmou. <br>
+            Entre cadernos e lições, fui testemunha da emoção, <br>
             do primeiro beijo, nasceu a conexão. Quem sou eu?</p>
             <input type="text" id="resposta" placeholder="Sua resposta">
             <button onclick="verificarResposta()">Enviar Resposta</button>
         </div>
-
-        <!-- Próxima Localização -->
+        
+        <!-- Localização do próximo QR Code -->
         <div id="localizacao">
-            <h3>Próxima Localização</h3>
-            <p>Envie uma mensagem para Lucas dizendo a seguinte frase:  
-            <strong>"Pôneis Malditos"</strong> e poderá seguir sua jornada!</p>
+            <h2>Parabéns! Você acertou!</h2>
+            <p>Envie uma mensagem para Lucas dizendo a seguinte frase: <strong>"Pôneis Malditos"</strong>, e poderá seguir sua jornada!</p>
         </div>
     </div>
 </body>
