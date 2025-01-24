@@ -98,7 +98,7 @@
         
         <!-- Hora do Mistério -->
         <div id="misterio">
-            <h2>Hora do Mistério</h2>
+            <h3>Hora do Mistério</h3>
             <p>Sou o lugar onde tudo começou, <br>
             nosso amor nasceu e logo se firmou. <br>
             Entre cadernos e lições, fui testemunha da emoção, <br>
