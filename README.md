@@ -95,7 +95,7 @@
         <p><strong>Wallyson Nascimento</strong></p>
 
         <!-- Vídeo -->
-        <iframe src="https://www.youtube.com/embed/sYriFTQlzBA" allowfullscreen></iframe>
+        <iframe src="https://youtu.be/8dvSUU5x7tY" allowfullscreen></iframe>
 
         <!-- Hora do Mistério -->
         <div id="misterio">
