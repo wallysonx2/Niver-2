@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O início da jornada</title>
+    <title>Jornada do Meu Aniversário Especial</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,6 +18,7 @@
         p {
             font-size: 18px;
             color: #333;
+            margin: 20px 0;
         }
         iframe {
             width: 100%;
@@ -25,21 +26,21 @@
             height: 405px;
             border: none;
             border-radius: 15px;
-            margin-top: 20px;
-            display: none;
+            margin: 20px 0;
         }
-        .proxima-pista {
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e0ffe0;
-            border: 2px solid #4CAF50;
-            border-radius: 10px;
-            font-size: 18px;
-            color: #333;
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .senha-container {
-            margin-top: 20px;
+        button:hover {
+            background-color: #45a049;
+        }
+        #senha-container, #conteudo, #misterio, #localizacao {
             display: none;
         }
         input[type="text"] {
@@ -49,52 +50,75 @@
             border-radius: 5px;
             margin-right: 10px;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
     </style>
     <script>
-        function mostrarSenha() {
-            document.querySelector('.senha-container').style.display = 'block';
+        function iniciarJornada() {
+            document.querySelector('#senha-container').style.display = 'block';
         }
 
         function verificarSenha() {
-            const senhaCorreta = "1808";
-            const senhaDigitada = document.getElementById("senha").value;
-            if (senhaDigitada === senhaCorreta) {
-                document.querySelector('iframe').style.display = 'block';
-                document.querySelector('.proxima-pista').style.display = 'block';
-                document.querySelector('.senha-container').style.display = 'none';
+            const senha = document.querySelector('#senha').value;
+            if (senha === "1808") {
+                document.querySelector('#senha-container').style.display = 'none';
+                document.querySelector('#conteudo').style.display = 'block';
             } else {
-                alert("Senha incorreta! Tente novamente.");
+                alert("Senha incorreta. Tente novamente!");
+            }
+        }
+
+        function verificarResposta() {
+            const resposta = document.querySelector('#resposta').value.toLowerCase();
+            if (resposta === "escola") {
+                document.querySelector('#misterio').style.display = 'none';
+                document.querySelector('#localizacao').style.display = 'block';
+            } else {
+                alert("Resposta incorreta. Tente novamente!");
             }
         }
     </script>
 </head>
 <body>
-    <h1>O início da jornada</h1>
-    <p>Clique no botão abaixo para começar sua jornada!</p>
-    <button onclick="mostrarSenha()">Surpresa</button>
+    <h1>Jornada do Meu Aniversário Especial</h1>
+    <button onclick="iniciarJornada()">Iniciar Jornada</button>
 
-    <div class="senha-container">
-        <p>Digite a senha para desbloquear:</p>
-        <input type="text" id="senha" placeholder="Digite a senha">
+    <!-- Campo de senha -->
+    <div id="senha-container">
+        <p>Digite a senha para começar: </p>
+        <input type="text" id="senha" placeholder="Senha">
         <button onclick="verificarSenha()">Confirmar</button>
     </div>
 
-    <iframe src="https://www.youtube.com/embed/sYriFTQlzBA" allowfullscreen></iframe>
+    <!-- Conteúdo da página -->
+    <div id="conteudo">
+        <h1>Feliz Aniversário, Kamilly!</h1>
+        <p>Seja bem-vinda à jornada para comemorar mais um ano da sua vida. Você é única e muito especial, e pra mostrar o quanto você significa pra mim, preparei algo diferente!  
+            A cada passo, você encontrará mensagens e desafios que revelam o carinho e a admiração que todos sentem por você.  
+            Tudo foi feito com amor, pensado só pra você! Obrigado por ser a luz da minha vida.  
+            Feliz 23 aninhos, Pequerrucha!  
+            <br><br>  
+            Com amor,  
+            Wallyson Nascimento.
+        </p>
 
-    <div class="proxima-pista">
-        <p>Sua próxima pista está no local onde compartilhamos nosso primeiro abraço especial! 🌟</p>
+        <!-- Vídeo -->
+        <iframe src="https://www.youtube.com/embed/sYriFTQlzBA" allowfullscreen></iframe>
+
+        <!-- Charada -->
+        <div id="misterio">
+            <h2>Hora do Mistério</h2>
+            <p>Sou o lugar onde tudo começou, nosso amor nasceu e logo se firmou.  
+                Entre cadernos e lições, fui testemunha da emoção, do primeiro beijo, nasceu a conexão.  
+                Quem sou eu?</p>
+            <input type="text" id="resposta" placeholder="Digite sua resposta">
+            <button onclick="verificarResposta()">Enviar Resposta</button>
+        </div>
+
+        <!-- Localização -->
+        <div id="localizacao">
+            <h2>Próximo Passo</h2>
+            <p>Envie uma mensagem para Lucas dizendo a seguinte frase:  
+                <strong>"Pôneis Malditos"</strong> e poderá seguir sua jornada!</p>
+        </div>
     </div>
 </body>
 </html>
