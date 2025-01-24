@@ -96,21 +96,18 @@
         <!-- Vídeo -->
         <iframe src="https://www.youtube.com/embed/8dvSUU5x7tY" allowfullscreen></iframe>
         
-        <!-- Hora do Mistério -->
+       <!-- Hora do Mistério -->
         <div id="misterio">
             <h3>Hora do Mistério</h3>
-            <p>Sou o lugar onde tudo começou, <br>
-            nosso amor nasceu e logo se firmou. <br>
-            Entre cadernos e lições, fui testemunha da emoção, <br>
-            do primeiro beijo, nasceu a conexão. Quem sou eu?</p>
+            <p>Sou o lugar onde tudo começou, nosso amor nasceu e logo se firmou. Entre cadernos e lições, fui testemunha da emoção, do primeiro beijo, nasceu a conexão. Quem sou eu?</p>
             <input type="text" id="resposta" placeholder="Sua resposta">
-            <button onclick="verificarResposta()">Enviar Resposta</button>
+            <button onclick="verificarResposta()">Enviar</button>
         </div>
-        
+
         <!-- Localização do próximo QR Code -->
         <div id="localizacao">
-            <h2>Parabéns! Você acertou!</h2>
-            <p>Envie uma mensagem para Lucas dizendo a seguinte frase: <strong>"Pôneis Malditos"</strong>, e poderá seguir sua jornada!</p>
+            <h3>Parabéns! Você acertou!</h3>
+            <p>Envie uma mensagem para Lucas dizendo a seguinte frase: <strong>"Pôneis Malditos"</strong> e poderá seguir sua jornada.</p>
         </div>
     </div>
 </body>
